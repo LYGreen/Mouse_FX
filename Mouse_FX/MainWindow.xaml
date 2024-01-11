@@ -1,0 +1,49 @@
+﻿<Window x:Class="Mouse_FX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_000"
+        mc:Ignorable="d"
+        Title="Mouse_FX" Height="215" Width="415" RenderTransformOrigin="0.5,0.5" Left="0" HorizontalAlignment="Left" VerticalAlignment="Top" StateChanged="Window_StateChanged" Closing="Window_Closing" Icon="/Mouse_FX.png" >
+    <Window.Background>
+        <SolidColorBrush Color="Silver" Opacity="1"/>
+    </Window.Background>
+    <Canvas>
+        <Label Content="粒子最大数量：" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="粒子的速度范围：" Canvas.Left="10" Canvas.Top="31" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="粒子颜色：" Canvas.Left="10" Canvas.Top="52" HorizontalAlignment="Center" VerticalAlignment="Top" Width="61"/>
+        <Label Content="粒子持续时间：" Canvas.Left="11" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="textbox_MaxCount" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="14" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Text="320"/>
+        <Label Content="dx:" Canvas.Left="105" Canvas.Top="31" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="~" Canvas.Left="176" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_Mindx" Canvas.Left="134" TextWrapping="Wrap" Canvas.Top="34" Width="42" HorizontalAlignment="Left" VerticalAlignment="Top" Text="-8"/>
+        <Label Content="R:" Canvas.Left="67" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textbox_R" Canvas.Left="88" TextWrapping="Wrap" Canvas.Top="56" Width="32" HorizontalAlignment="Left" VerticalAlignment="Center" Text="0"/>
+        <Label Content="G:" Canvas.Left="126" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textbox_G" Canvas.Left="147" TextWrapping="Wrap" Canvas.Top="56" Width="32" HorizontalAlignment="Left" VerticalAlignment="Center" Text="192"/>
+        <Label Content="B:" Canvas.Left="183" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textbox_B" Canvas.Left="204" TextWrapping="Wrap" Canvas.Top="56" Width="32" HorizontalAlignment="Left" VerticalAlignment="Center" Text="0"/>
+        <Label Content="s" Canvas.Left="144" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="~" Canvas.Left="160" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_MinLife" Canvas.Left="95" TextWrapping="Wrap" Canvas.Top="98" Width="49" HorizontalAlignment="Left" VerticalAlignment="Top" Text="0"/>
+        <Label Content="s" Canvas.Left="233" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_Maxdx" Canvas.Left="194" TextWrapping="Wrap" Canvas.Top="34" Width="42" Text="8" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="dy:" Canvas.Left="248" Canvas.Top="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="~" Canvas.Left="319" Canvas.Top="31" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_Mindy" Canvas.Left="277" TextWrapping="Wrap" Canvas.Top="35" Width="42" Text="-8" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_Maxdy" Canvas.Left="337" TextWrapping="Wrap" Canvas.Top="35" Width="42" Text="8" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="更新粒子发射器" Canvas.Left="10" Canvas.Top="150" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkbox_DisplayParticleWindow" Content="显示粒子窗口" Canvas.Left="287" Canvas.Top="148" HorizontalAlignment="Center" VerticalAlignment="Top" Click="checkbox_DisplayParticleWindow_Click"/>
+        <CheckBox x:Name="checkbox_RandomColor" Content="随机颜色" Canvas.Left="248" Canvas.Top="58" Click="checkbox_RandomColor_Click" IsChecked="True"/>
+        <Label Content="粒子透明度(0~1)：" Canvas.Left="11" Canvas.Top="116" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="textbox_MaxLife" Canvas.Left="184" TextWrapping="Wrap" Canvas.Top="98" Width="49" Text="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="~" Canvas.Left="164" Canvas.Top="116" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_MinAlpha" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="120" Width="49" Text="0.5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_MaxAlpha" Canvas.Left="183" TextWrapping="Wrap" Canvas.Top="120" Width="49" Text="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="粒子大小：" Canvas.Left="10" Canvas.Top="74" Width="87" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="~" Canvas.Left="120" Canvas.Top="74" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textbox_MinSize" Canvas.Left="70" TextWrapping="Wrap" Canvas.Top="78" Width="50" Text="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textbox_MaxSize" Canvas.Left="140" TextWrapping="Wrap" Canvas.Top="78" Width="48" Text="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+    </Canvas>
+</Window>

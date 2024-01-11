@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ApplicationIcon>Mouse_FX.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mouse_FX.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Mouse_FX.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Mouse_FX.png" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir &quot;bin&quot;&#xD;&#xA;mkdir &quot;bin\Debug&quot;&#xD;&#xA;mkdir &quot;bin\Debug\net6.0-windows&quot;&#xD;&#xA;&#xD;&#xA;mkdir &quot;bin&quot;&#xD;&#xA;mkdir &quot;bin\Release&quot;&#xD;&#xA;mkdir &quot;bin\Release\net6.0-windows&quot;&#xD;&#xA;&#xD;&#xA;Copy &quot;Mouse_FX.ico&quot; &quot;bin\Debug\net6.0-windows\&quot;&#xD;&#xA;Copy &quot;Mouse_FX.png&quot; &quot;bin\Debug\net6.0-windows\&quot;&#xD;&#xA;Copy &quot;Mouse_FX.ico&quot; &quot;bin\Release\net6.0-windows\&quot;&#xD;&#xA;Copy &quot;Mouse_FX.png&quot; &quot;bin\Release\net6.0-windows\&quot;" />
+  </Target>
+
+</Project>
